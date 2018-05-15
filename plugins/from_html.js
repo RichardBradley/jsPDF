@@ -265,7 +265,7 @@
     }
 
 		// Try class names
-		classNames = element.className ? element.className.split(' ') : [];
+		classNames = (element.className && element.className.split) ? element.className.split(' ') : [];
 		for (i = 0; i < classNames.length; i++) {
 			handlers = elementHandlers['.' + classNames[i]];
 			if (!isHandledElsewhere && handlers) {
